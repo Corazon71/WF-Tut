@@ -1,4 +1,4 @@
-from src.Math_Ops import CmplxSum, CmplxSub, CmplxMul, CmplxDiv
+from src.Math_Ops import CmplxSum, CmplxDiff, CmplxProd, CmplxQuot
 
 X = {'real': 2, 'imag': 9}
 Y = {'real': 1, 'imag': 7}
@@ -10,13 +10,13 @@ def test_CmplxSum():
     assert CmplxSum(Z, W) == (13, 12)
 
 def test_CmplxSub():
-    assert CmplxSub(X, Y) == (1, 2)
-    assert CmplxSub(Z, W) == (-3, 6)
+    assert CmplxDiff(X, Y) == (1, 2)
+    assert CmplxDiff(Z, W) == (-3, 6)
 
 def test_CmplxMul():
-    assert CmplxMul(X, Y) == (-61, 23)
-    assert CmplxMul(Z, W) == (13, 87)
+    assert CmplxProd(X, Y) == (-61, 23)
+    assert CmplxProd(Z, W) == (13, 87)
 
 def test_CmplxDiv():
-    assert CmplxDiv(Y, X) == (0.77, 0.06)
-    assert CmplxDiv(Z, W) == (0.92, 0.78)
+    assert CmplxQuot(Y, X) == (0.77, 0.06)
+    assert CmplxQuot(Z, W) == (0.92, 0.78)
