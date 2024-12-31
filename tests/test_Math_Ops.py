@@ -1,22 +1,27 @@
 from src.Math_Ops import CmplxSum, CmplxDiff, CmplxProd, CmplxQuot
 
+# Test data
 X = {'real': 2, 'imag': 9}
 Y = {'real': 1, 'imag': 7}
 Z = {'real': 5, 'imag': 9}
 W = {'real': 8, 'imag': 3}
 
 def test_CmplxSum():
-    assert CmplxSum(X, Y) == (3, 16)
-    assert CmplxSum(Z, W) == (13, 12)
+    """Test the addition of complex numbers."""
+    assert CmplxSum(X, Y) == {'real': 3, 'imag': 16}
+    assert CmplxSum(Z, W) == {'real': 13, 'imag': 12}
 
-def test_CmplxSub():
-    assert CmplxDiff(X, Y) == (1, 2)
-    assert CmplxDiff(Z, W) == (-3, 6)
+def test_CmplxDiff():
+    """Test the subtraction of complex numbers."""
+    assert CmplxDiff(X, Y) == {'real': 1, 'imag': 2}
+    assert CmplxDiff(Z, W) == {'real': -3, 'imag': 6}
 
-def test_CmplxMul():
-    assert CmplxProd(X, Y) == (-61, 23)
-    assert CmplxProd(Z, W) == (13, 87)
+def test_CmplxProd():
+    """Test the multiplication of complex numbers."""
+    assert CmplxProd(X, Y) == {'real': -61, 'imag': 23}
+    assert CmplxProd(Z, W) == {'real': 13, 'imag': 87}
 
-def test_CmplxDiv():
-    assert CmplxQuot(Y, X) == (0.77, 0.06)
-    assert CmplxQuot(Z, W) == (0.92, 0.78)
+def test_CmplxQuot():
+    """Test the division of complex numbers."""
+    assert CmplxQuot(Y, X) == {'real': 0.77, 'imag': 0.06}
+    assert CmplxQuot(Z, W) == {'real': 0.92, 'imag': 0.78}
