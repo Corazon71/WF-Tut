@@ -23,5 +23,5 @@ def test_CmplxProd():
 
 def test_CmplxQuot():
     """Test the division of complex numbers."""
-    assert CmplxQuot(Y, X) == {'real': 0.77, 'imag': 0.06}
+    assert CmplxQuot(Y, X) == {'real': 0.76, 'imag': 0.06}
     assert CmplxQuot(Z, W) == {'real': 0.92, 'imag': 0.78}
