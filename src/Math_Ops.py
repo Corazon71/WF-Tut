@@ -9,4 +9,6 @@ def CmplxProd(a, b):
 
 def CmplxQuot(a, b):
     den = b['real']**2 + b['imag']**2
-    return ((a['real'] * b['real'] + a['imag'] * b['imag']) / den, (a['imag'] * b['real'] - a['real'] * b['imag']) / den)
+    real_part = (a['real'] * b['real'] + a['imag'] * b['imag']) / den
+    imag_part = (a['imag'] * b['real'] - a['real'] * b['imag']) / den
+    return round(real_part, 2), round(imag_part, 2)
